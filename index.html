@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div>
+        <div class="h-screen w-screen flex justify-center items-center">
+            <div class="w-[400px] h-[500px]  rounded-lg overflow-hidden shadow-xl shadow-blue-300 relative">
+                <div class="w-full h-full bg-blue-400/30 p-4 ">
+                    <p class="text-center border rounded-xl px-5 font-semibold border-blue-300 text-teal-700  w-fit mx-auto">Music</p>
+                    <div class="mx-auto rounded-lg w-[200px] h-200px my-8">
+
+                        <img src="https://i.scdn.co/image/ab67616d00001e0225fa2d19b2363a9520a34409" id="thumbnail" class="overflow-hidden rounded-xl cover" alt="">
+                    </div>
+                    <div class="card-content px-4">
+                        <p class="font-bold text-center text-lg" id="title">Lorem, ipsum dolor.</p>
+                        <p class="font-semibold text-center text-md text-gray-600" id="description">Lorem, ipsum dolor.</p>
+                        <div class="w-full px-8 my-4 flex items-center justify-evenly" >
+                            <audio src="" id="audio"></audio>
+                            <span  class="cursor-pointer" id="backword" onclick="previousSong()"><i class="fa-solid fa-backward"></i></span>
+                            <span class="cursor-pointer" id="play" onclick="playMusic()"><i class="fa-solid fa-play"></i></span>
+                            <span class="cursor-pointer" id="pause" onclick="pauseMusic()" style="display: none;"><i class="fa-solid fa-pause"></i></span>
+                            <span class="cursor-pointer" id="forward" onclick="forwardSong()"><i class="fa-solid fa-forward"></i></span>
+                        </div>
+                        <div class="w-full h-2 bg-gray-400 rounded-lg" onclick="skip(this)">
+                            <div class="w-[0] h-2 bg-green-400 rounded-lg" id="Played-path"></div>
+                        </div>
+                        <div class="w-full flex justify-between items-center">
+                            <p id="currentTime"></p>
+                            <p id="duration"></p>
+                        </div>
+                        <div class="bottom-0  left-0 p-3 absolute w-full flex justify-evenly items-center">
+
+                            <span><i class="fa-solid fa-shuffle"></i></span>
+                            <span><i class="fa-solid fa-headphones"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
