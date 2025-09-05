@@ -19,21 +19,21 @@ let songs =[
         title:"Jugrafiya",
         description:"lorem sdlij ldvkjn dfkjnd ;kdjn fv;kjrdn ",
         thumbnail:"https://i.scdn.co/image/ab67616d00001e02e76275da5828d6f937c3bcf3",
-        audio:"./music/song1.mp3",
+        audio:"./music/jugrafiya.mp3",
 
     },
     {
         title:"Ye javani hai diwani",
         description:"lorem sdlij ldvkjn dfkjnd ;kdjn fv;kjrdn ",
         thumbnail:"https://i.scdn.co/image/ab67616d00001e02707ea5b8023ac77d31756ed4",
-        audio:"./music/song1.mp3",
+        audio:"./music/ye-javani.mp3",
 
     },
     {
         title:"Koi vi nahi",
         description:"lorem sdlij ldvkjn dfkjnd ;kdjn fv;kjrdn ",
         thumbnail:"https://i.scdn.co/image/ab67616d00001e02a74ee9f7c37f9233dd3e8366",
-        audio:"./music/song1.mp3",
+        audio:"./music/koi-vi-nahi.mp3",
 
     }
 ]
@@ -81,7 +81,6 @@ const musicLoader = async (song)=>{
 
 const forwardSong = ()=>{
    
-    console.log(songs.length)
     songs.length-1 > current ? current ++ : current =0;
     musicLoader(songs[current])
     setTimeout(()=>{
