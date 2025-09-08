@@ -1,35 +1,35 @@
 let songs = [
   {
     title: "Dil to jan to",
-    description: "lorem sdlij ldvkjn dfkjnd ;kdjn fv;kjrdn ",
+    description: "Chet Singh ",
     thumbnail:
       "https://i.scdn.co/image/ab67616d00001e02f8f636b6478d4ba9bd85e339",
     audio: "./music/dil_to.mp3",
   },
   {
     title: "Marjana",
-    description: "lorem sdlij ldvkjn dfkjnd ;kdjn fv;kjrdn ",
+    description: "Karan Randhawa ",
     thumbnail:
       "https://i.scdn.co/image/ab67616d00001e02727d531901c07a499498c544",
     audio: "./music/song1.mp3",
   },
   {
     title: "Jugrafiya",
-    description: "lorem sdlij ldvkjn dfkjnd ;kdjn fv;kjrdn ",
+    description: "Udit Narayan ",
     thumbnail:
       "https://i.scdn.co/image/ab67616d00001e02e76275da5828d6f937c3bcf3",
     audio: "./music/jugrafiya.mp3",
   },
   {
     title: "Ye javani hai diwani",
-    description: "lorem sdlij ldvkjn dfkjnd ;kdjn fv;kjrdn ",
+    description: "Amitabh Bhattacharya  ",
     thumbnail:
       "https://i.scdn.co/image/ab67616d00001e02707ea5b8023ac77d31756ed4",
     audio: "./music/ye-javani.mp3",
   },
   {
     title: "Koi vi nahi",
-    description: "lorem sdlij ldvkjn dfkjnd ;kdjn fv;kjrdn ",
+    description: "Shirley Setia ",
     thumbnail:
       "https://i.scdn.co/image/ab67616d00001e02a74ee9f7c37f9233dd3e8366",
     audio: "./music/koi-vi-nahi.mp3",
@@ -81,7 +81,7 @@ const forwardSong = () => {
   }, 100);
 };
 const previousSong = () => {
-  songs.length - 1 > current ? current-- : (current = 0);
+   current!=0 ? current-- : (current = songs.length - 1);
   musicLoader(songs[current]);
   setTimeout(() => {
     playMusic();
