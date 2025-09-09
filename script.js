@@ -80,6 +80,7 @@ const forwardSong = () => {
     playMusic();
   }, 100);
 };
+
 const previousSong = () => {
    current!=0 ? current-- : (current = songs.length - 1);
   musicLoader(songs[current]);
